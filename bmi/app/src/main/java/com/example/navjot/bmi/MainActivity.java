@@ -1,6 +1,8 @@
 package com.example.navjot.bmi;
 
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -9,6 +11,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -27,6 +30,29 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+        InClassDatabaseHelper helper = new InClassDatabaseHelper(this);
+        SQLiteDatabase db = helper.getWritableDatabase();
+// run a query
+        Cursor cursor = db.query(InClassDatabaseHelper.TABLE_NAME,new String[]
+                        {"NAME","PASSWORD","DATE", "HEALTH_CARD_NUMB"},
+                null,null,null,null,null); //
+        if (cursor.moveToFirst()){
+            String name = cursor.getString(0);
+            EditText editName = (EditText) findViewById(R.id.editText8);
+            editName.setText(name);
+            String password = cursor.getString(1);
+            EditText editPassword =(EditText) findViewById(R.id.editText12);
+            editPassword.setText(password);
+            String date = cursor.getString(2);
+            EditText editDate =(EditText) findViewById(R.id.editText9);
+            editDate.setText(date);
+            String Health = cursor.getString(3);
+            EditText editHealth =(EditText) findViewById(R.id.editText10);
+            editHealth.setText(Health);
+        }
+        cursor.close(); // cleanup
+        db.close(); // cleanup
     }
 
     @Override
