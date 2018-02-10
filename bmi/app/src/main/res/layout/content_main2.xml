@@ -8,61 +8,78 @@
     tools:context="com.example.navjot.bmi.Main2Activity"
     tools:showIn="@layout/activity_main2">
 
-    <GridLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="508dp">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/textView"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Height"
             android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
 
         <EditText
             android:id="@+id/editText1"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_column="1"
-            android:layout_row="0"
             android:ems="10"
             android:inputType="textPersonName" />
 
         <TextView
             android:id="@+id/textView2"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_column="0"
-            android:layout_row="1"
             android:text="Weight"
             android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
 
         <EditText
             android:id="@+id/editText7"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_column="1"
-            android:layout_row="1"
+            android:ems="10"
+            android:inputType="textPersonName" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Date" />
+
+        <EditText
+            android:id="@+id/editText3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName" />
 
         <Button
             android:id="@+id/button2"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_column="1"
-            android:layout_row="2"
             android:onClick="calcButton"
             android:text="Button" />
 
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="BMIResult" />
+
         <EditText
             android:id="@+id/editText"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_column="1"
-            android:layout_row="3"
             android:ems="10"
             android:inputType="textPersonName" />
 
-    </GridLayout>
+        <Button
+            android:id="@+id/listbutton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="listbutton"
+            android:text="ListButton" />
+
+    </LinearLayout>
 </android.support.design.widget.CoordinatorLayout>

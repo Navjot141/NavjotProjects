@@ -14,6 +14,14 @@
         android:orientation="vertical">
 
         <EditText
+            android:id="@+id/editText2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="email" />
+
+        <EditText
             android:id="@+id/editText8"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -52,6 +60,13 @@
             android:layout_height="wrap_content"
             android:onClick="hellobutton"
             android:text="SUBMIT" />
+
+        <Button
+            android:id="@+id/GBMI"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="GOtobmi"
+            android:text="GO TO BMI" />
 
     </LinearLayout>
 </android.support.design.widget.CoordinatorLayout>

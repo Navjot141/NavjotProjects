@@ -14,12 +14,15 @@ import android.widget.EditText;
 import java.util.Date;
 public class Main2Activity extends AppCompatActivity {
 
+    InClassDatabaseHelper helper;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        helper = new InClassDatabaseHelper(this);
 
 
         //if (getSupportActionBar() != null) {
@@ -45,9 +48,16 @@ public class Main2Activity extends AppCompatActivity {
             Double calc = (HeightAsInt / (WeightAsInt * WeightAsInt));
             EditText result = (EditText) findViewById(R.id.editText);
             result.setText(Double.toString(calc));
+            helper.BMIResult(value,value1,Double.toString(calc));
+
+
         }
     }
-
+    public void listbutton (View v)
+    {
+        Intent intent=new Intent(this,BMIListActivity.class);
+        startActivity(intent);
+    }
     public void foo() {
 
     }
