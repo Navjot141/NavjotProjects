@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#E8EAF6">
+
+    <!-- <TextView
+        android:id="@+id/textView9"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:textColor="#3F51B5"
+        android:textSize="17sp"
+        android:text="DATE" />
+
+    <EditText
+        android:id="@+id/Dbmifield"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ems="10"
+        android:inputType="date" /> -->
+
+    <TextView
+        android:id="@+id/btextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#3F51B5"
+        android:textSize="17sp"
+        android:layout_weight="1"
+        android:text="HEIGHT (cm)" />
+
+    <EditText
+        android:id="@+id/Bheightfield"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:selectAllOnFocus="false"
+        android:textAppearance="@style/TextAppearance.AppCompat" />
+
+    <TextView
+        android:id="@+id/BW"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textColor="#3F51B5"
+        android:textSize="17sp"
+        android:text="WEIGHT(Kg)" />
+
+    <EditText
+        android:id="@+id/Bweightfield"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:selectAllOnFocus="false" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="RESULT"
+        android:textColor="#3F51B5"
+        android:textSize="17sp" />
+
+    <EditText
+        android:id="@+id/Resultfied"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/interpret"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#3F51B5"
+        android:layout_weight="1" />
+
+    <Button
+        android:id="@+id/Calculatebutton"
+        android:layout_width="match_parent"
+        android:layout_height="22dp"
+        android:layout_weight="1"
+        android:onClick="CalculateClick"
+        android:text="Calculate" />
+
+    <Button
+        android:id="@+id/listbutton"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_weight="1"
+        android:onClick="showlistclick"
+        android:text="LIST" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_weight="1"
+        android:onClick="logout"
+        android:text="LOG OUT" />
+</LinearLayout>
