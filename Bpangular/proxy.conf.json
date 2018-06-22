@@ -1,0 +1,10 @@
+{
+  "/Bpusers": {
+    "target": "http://dev.cs.smu.ca:8310",
+    "secure": true,
+    "pathRewrite": {
+      "^/Bpusers": ""
+    },
+    "changeOrigin": true
+  }
+}

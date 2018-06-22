@@ -1,0 +1,58 @@
+<div class="home_info">
+  <div class="row" *ngIf="error_message != ''">
+    <div class="col-md-12">
+      <div class="alert alert-danger">
+        <strong>Error!</strong> {{ error_message }}
+      </div>
+    </div>
+  </div>
+<div class="home_info">
+  <div class="row text-center">
+    <div class="col-md-12 text-center">
+      <form #bpuserForm="ngForm" (ngSubmit)="formSubmit()">
+
+        <div class="form-group">
+          <label hidden for="email">Email</label>
+          <input type="text" hidden class="form-control" id="email" [(ngModel)]="model.user" required name="email">
+        </div>
+
+        <div class="form-group" >
+          <label for="Date">Date</label>
+          <input type="text" class="form-control" id="Date"
+                 [(ngModel)]="model.Date" required name="Date"
+                 #name="ngModel">
+        </div>
+
+        <div class="form-group">
+          <label for="Tg">High Pressure</label>
+          <input type="text" class="form-control" id="Tg" [(ngModel)]="model.Tg" required name="highpressure"
+                 #location="ngModel">
+        </div>
+        <div class="form-group">
+          <label for="Tg">Low Pressure</label>
+          <input type="text" class="form-control" id="TSH" [(ngModel)]="model.TSH" required name="lowpressure"
+                 #location="ngModel">
+        </div>
+
+        <button type="submit" style="width: 100%" class="btn btn-success" [disabled]="!bpuserForm.form.valid">
+          Submit
+        </button>
+      </form>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4 job_column" *ngFor="let Bpuser of Bpusers">
+
+      <div>
+        <h4 class="card-title">{{Bpuser.Tg}}</h4>
+        <h4 class="card-title"> {{Bpuser.TSH}} </h4>
+        <p class="card-text">{{Bpuser.Date}}</p>
+
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+
+
+
