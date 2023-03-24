@@ -1,2 +1,2 @@
 # NAVJOT KAUR
-MY NAME IS NAVJOT. I AM A STUDENT OF MASTER OF COMPUTING AND DATA ANALYTICS
+This is Navjot. I have completed Master of Science in Computing and Data Analytics. I have been working 5 years of experience working as a software developer.
